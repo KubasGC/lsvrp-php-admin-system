@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="css/lsvrp.css">
+		<link rel="stylesheet" type="text/css" href="css/lsvrp-modal.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<div id="lsvrp_dialog" class="lsvrp-modal" v-show="show">
+					<div class="header">{{ header }}</div>
+					<div class="body">
+						<div class="list-header">
+							<div v-for="column in columns" :style="{width: column.size + '%'}" class="column">{{ column.name }}</div>
+						</div>
+						<div class="list-body">
+							<div v-for="(dataValue, dataKey) in datas" @dblclick="firstButton" v-on:click="activeRow = dataKey" :class="{row: true, active: activeRow === dataKey}">
+								<div v-for="(value, key) in columns" class="column" :style="{width: value.size + '%'}">
+									{{ dataValue[key + 1] }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div v-if="buttons.length > 1" @click="firstButton" class="button-half color-blue">{{ buttons[0] }}</div>
+						<div v-if="buttons.length > 1" @click="secondButton" class="button-half color-red">{{ buttons[1] }}</div>
+						<div v-if="buttons.length == 1" @click="firstButton" class="button-full color-blue">{{ buttons[0] }}</div>
+					</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/lsvrp.js"></script>
+	</body>
+</html>

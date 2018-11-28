@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Source Sans";
+  src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Bold";
+  src: url("../fonts/SourceSansPro-Bold.ttf");
+}
+
+::-webkit-scrollbar-button{ display: none; height: 10px; border-radius: 0px; background-color: #000000; }
+::-webkit-scrollbar-button:hover{ background-color: #AAA; }
+::-webkit-scrollbar-thumb{ background-color: rgba(20, 20, 20, 0.7); border-radius: 0px; }
+::-webkit-scrollbar-thumb:hover{ background-color: #2e2e2e; }
+::-webkit-scrollbar-track{ background-color: rgba(200, 200, 200, 0.5); }
+::-webkit-scrollbar-track:hover{ background-color: #CCC; }
+::-webkit-scrollbar{ width: 8px; }
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  user-select: none;
+}
+
+.lsvrp-modal {
+    width: 500px;
+    height: 450px;
+    margin 0 auto;
+}
+
+.lsvrp-modal .header {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  color: #F2FAFF;
+  background-color: rgba(21, 146, 214, 0.9);
+  font-family: "Source Sans";
+  text-align: center;
+}
+
+.lsvrp-modal .body {
+  height: 300px;
+  background-color: rgba(20, 20, 20, 0.65);
+  color: rgba(242, 250, 255, 0.8);
+  font-family: "Source Sans";
+}
+
+.lsvrp-modal .footer {
+  height: 50px;
+  width: 100%;
+  font-family: "Source Sans";
+}
+
+.lsvrp-modal .footer .button-half {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  width: 50%;
+  background: rgba(20, 20, 20, 0.6);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+
+.lsvrp-modal .footer .button-full {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .color-blue {
+  background: rgba(20, 20, 20, 0.6) !important;
+}
+
+.footer .color-red {
+  background: rgba(20, 20, 20, 0.6) !important;
+}
+
+.footer .color-blue:hover {
+  background: rgba(21, 146, 214, 0.9) !important;
+}
+
+.footer .color-red:hover {
+  background: rgba(162, 37, 34, 0.9) !important;
+}
+
+.lsvrp-modal .body .list-header {
+  color: #686967;
+  font-family: "Source Sans";
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.lsvrp-modal .body .list-header .column {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.lsvrp-modal .body .list-body {
+  height: 275px;
+  line-height: 18px;
+  font-family: "Source Sans";
+  font-size: 14px;
+  overflow-y: scroll;
+}
+
+.lsvrp-modal .body .list-body .row {
+  // background-color: rgba(0, 0, 0, 0.5);
+  height: 25px;
+  line-height: 25px;
+}
+
+.lsvrp-modal .body .list-body .row:hover {
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.lsvrp-modal .body .list-body .row.active {
+  background: rgb(100, 100, 100, 0.8);
+}
+
+.lsvrp-modal .body .list-body .row .column {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 8px;
+}
